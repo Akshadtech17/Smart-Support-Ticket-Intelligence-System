@@ -1,0 +1,53 @@
+category,mean,median,minimum,maximum
+Arts & Entertainment/Movies,77.83206106870229,84.0,15,123
+Home & Garden/Home Improvement,77.76177285318559,85.0,17,129
+Travel & Transportation/Air Travel,77.43,85.5,10,135
+Home & Garden/Landscaping,76.8359375,85.0,18,130
+Online Communities/Forums,76.55685131195335,80.0,18,123
+Pets & Animals/Veterinary Care,75.5505617977528,81.5,15,127
+Law & Government/Government Services,75.22085889570552,82.0,19,125
+Food & Drink/Restaurants,74.54576271186441,81.0,18,128
+Finance/Personal Finance,74.5224358974359,86.0,16,125
+Online Communities/Social Networks,74.19254658385093,82.0,15,124
+Beauty & Fitness/Fitness Training,74.19031141868513,81.0,16,129
+Hobbies & Leisure/Crafts,74.14240506329114,83.0,18,124
+Jobs & Education/Online Courses,74.05167173252279,80.0,18,130
+Hobbies & Leisure/Collectibles,73.69846153846154,81.0,10,152
+Science/Research,73.53225806451613,81.0,18,121
+Jobs & Education/Recruitment,73.36896551724138,80.0,14,122
+Pets & Animals/Pet Services,73.36269430051813,78.0,17,141
+Travel & Transportation/Land Travel,73.22658610271904,80.0,20,120
+Real Estate,72.47826086956522,73.0,18,116
+Arts & Entertainment/Music,72.12080536912751,78.0,11,128
+Beauty & Fitness/Cosmetics,72.10333333333334,82.0,14,137
+Finance/Investments,71.78899082568807,78.0,18,150
+Sports,71.7542372881356,77.0,15,115
+Games,71.3953488372093,77.0,10,140
+IT & Technology/Software Development,70.84351145038168,77.5,14,132
+Autos & Vehicles/Maintenance,70.8259385665529,75.0,12,132
+News,70.76501305483029,79.0,19,120
+Books & Literature/Fiction,70.76124567474048,74.0,15,137
+IT & Technology/Hardware Support,70.47098976109216,74.0,17,127
+Science/Environmental Science,70.44025157232704,79.0,11,121
+Business & Industrial/Manufacturing,70.3699421965318,79.0,14,130
+Law & Government/Legal Advice,70.23809523809524,76.0,12,127
+Shopping/E-commerce,70.1466275659824,77.0,15,123
+Shopping/Retail Stores,70.02826855123675,78.0,16,120
+Health/Mental Health,69.48703170028818,74.0,18,136
+Health/Medical Services,69.22375690607734,76.0,15,136
+Food & Drink/Groceries,68.9789156626506,71.0,16,125
+People & Society/Culture & Society,67.90106007067138,74.0,19,124
+IT & Technology/Network Infrastructure,67.65562913907284,74.0,15,121
+IT & Technology/Security Operations,67.05753424657534,73.0,10,119
+Books & Literature/Non-Fiction,66.9875,70.0,13,131
+Autos & Vehicles/Sales,66.1923076923077,68.0,11,121
+General Inquiry,63.80714285714286,67.5,1,213
+Billing and Payments,62.06875155125341,61.0,2,283
+Customer Service,61.567059208374225,60.0,2,257
+Technical Support,61.14160794634519,59.0,2,232
+Service Outages and Maintenance,60.418100701083496,60.0,5,235
+Product Support,60.10277478448276,58.0,4,257
+IT Support,60.042562069684955,58.0,4,217
+Returns and Exchanges,59.9745889387145,58.0,2,199
+Sales and Pre-Sales,58.59474522292994,58.0,5,181
+Human Resources,58.126835781041386,55.0,6,187

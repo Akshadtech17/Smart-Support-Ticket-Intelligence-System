@@ -1,0 +1,53 @@
+encoded_value,category
+0,Arts & Entertainment/Movies
+1,Arts & Entertainment/Music
+2,Autos & Vehicles/Maintenance
+3,Autos & Vehicles/Sales
+4,Beauty & Fitness/Cosmetics
+5,Beauty & Fitness/Fitness Training
+6,Billing and Payments
+7,Books & Literature/Fiction
+8,Books & Literature/Non-Fiction
+9,Business & Industrial/Manufacturing
+10,Customer Service
+11,Finance/Investments
+12,Finance/Personal Finance
+13,Food & Drink/Groceries
+14,Food & Drink/Restaurants
+15,Games
+16,General Inquiry
+17,Health/Medical Services
+18,Health/Mental Health
+19,Hobbies & Leisure/Collectibles
+20,Hobbies & Leisure/Crafts
+21,Home & Garden/Home Improvement
+22,Home & Garden/Landscaping
+23,Human Resources
+24,IT & Technology/Hardware Support
+25,IT & Technology/Network Infrastructure
+26,IT & Technology/Security Operations
+27,IT & Technology/Software Development
+28,IT Support
+29,Jobs & Education/Online Courses
+30,Jobs & Education/Recruitment
+31,Law & Government/Government Services
+32,Law & Government/Legal Advice
+33,News
+34,Online Communities/Forums
+35,Online Communities/Social Networks
+36,People & Society/Culture & Society
+37,Pets & Animals/Pet Services
+38,Pets & Animals/Veterinary Care
+39,Product Support
+40,Real Estate
+41,Returns and Exchanges
+42,Sales and Pre-Sales
+43,Science/Environmental Science
+44,Science/Research
+45,Service Outages and Maintenance
+46,Shopping/E-commerce
+47,Shopping/Retail Stores
+48,Sports
+49,Technical Support
+50,Travel & Transportation/Air Travel
+51,Travel & Transportation/Land Travel

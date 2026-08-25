@@ -1,0 +1,20 @@
+Priority - Linear SVM
+======================================================================
+
+Accuracy       : 0.2924
+Macro Precision: 0.1907
+Macro Recall   : 0.1905
+Macro F1       : 0.1905
+Weighted F1    : 0.2938
+
+              precision    recall  f1-score   support
+
+    critical       0.03      0.03      0.03       383
+        high       0.34      0.33      0.33      3731
+         low       0.19      0.19      0.19      2206
+      medium       0.36      0.36      0.36      4015
+    very_low       0.03      0.04      0.04       357
+
+    accuracy                           0.29     10692
+   macro avg       0.19      0.19      0.19     10692
+weighted avg       0.30      0.29      0.29     10692

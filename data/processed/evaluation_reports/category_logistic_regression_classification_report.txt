@@ -1,0 +1,67 @@
+Category - Logistic Regression
+======================================================================
+
+Accuracy       : 0.5313
+Macro Precision: 0.7940
+Macro Recall   : 0.8319
+Macro F1       : 0.8040
+Weighted F1    : 0.5377
+
+                                        precision    recall  f1-score   support
+
+           Arts & Entertainment/Movies       0.92      0.88      0.90        52
+            Arts & Entertainment/Music       0.89      0.98      0.94        60
+          Autos & Vehicles/Maintenance       0.82      0.83      0.82        59
+                Autos & Vehicles/Sales       0.83      0.95      0.88        73
+            Beauty & Fitness/Cosmetics       0.93      0.93      0.93        60
+     Beauty & Fitness/Fitness Training       0.81      0.90      0.85        58
+                  Billing and Payments       0.75      0.63      0.68       806
+            Books & Literature/Fiction       0.98      0.97      0.97        58
+        Books & Literature/Non-Fiction       0.78      0.91      0.84        64
+   Business & Industrial/Manufacturing       0.96      0.93      0.94        69
+                      Customer Service       0.34      0.31      0.32      1223
+                   Finance/Investments       0.95      0.95      0.95        65
+              Finance/Personal Finance       0.80      0.98      0.88        62
+                Food & Drink/Groceries       0.93      1.00      0.96        66
+              Food & Drink/Restaurants       0.90      0.88      0.89        59
+                                 Games       0.95      0.97      0.96        60
+                       General Inquiry       0.13      0.47      0.20       112
+               Health/Medical Services       0.91      0.97      0.94        72
+                  Health/Mental Health       0.96      0.96      0.96        69
+        Hobbies & Leisure/Collectibles       0.93      0.80      0.86        65
+              Hobbies & Leisure/Crafts       0.92      0.94      0.93        63
+        Home & Garden/Home Improvement       0.92      0.90      0.91        72
+             Home & Garden/Landscaping       0.90      0.69      0.78        51
+                       Human Resources       0.25      0.55      0.35       150
+      IT & Technology/Hardware Support       0.92      0.98      0.95        59
+IT & Technology/Network Infrastructure       0.92      1.00      0.96        60
+   IT & Technology/Security Operations       0.83      0.96      0.89        73
+  IT & Technology/Software Development       0.91      1.00      0.95        52
+                            IT Support       0.38      0.35      0.37       959
+       Jobs & Education/Online Courses       0.86      0.98      0.92        66
+          Jobs & Education/Recruitment       0.95      0.97      0.96        58
+  Law & Government/Government Services       0.89      0.77      0.83        65
+         Law & Government/Legal Advice       0.96      0.81      0.88        59
+                                  News       0.96      0.94      0.95        77
+             Online Communities/Forums       1.00      0.97      0.99        69
+    Online Communities/Social Networks       0.65      0.94      0.77        64
+    People & Society/Culture & Society       0.95      0.93      0.94        57
+           Pets & Animals/Pet Services       0.87      0.81      0.84        77
+        Pets & Animals/Veterinary Care       0.93      0.90      0.91        71
+                       Product Support       0.49      0.25      0.33      1485
+                           Real Estate       0.84      0.91      0.88        46
+                 Returns and Exchanges       0.28      0.41      0.33       402
+                   Sales and Pre-Sales       0.16      0.49      0.24       251
+         Science/Environmental Science       0.88      0.95      0.92        64
+                      Science/Research       0.98      0.87      0.92        62
+       Service Outages and Maintenance       0.33      0.61      0.43       314
+                   Shopping/E-commerce       0.90      0.94      0.92        68
+                Shopping/Retail Stores       0.92      0.96      0.94        57
+                                Sports       0.79      0.98      0.88        47
+                     Technical Support       0.57      0.45      0.50      2356
+    Travel & Transportation/Air Travel       0.88      0.93      0.90        60
+   Travel & Transportation/Land Travel       0.82      0.92      0.87        66
+
+                              accuracy                           0.53     10692
+                             macro avg       0.79      0.83      0.80     10692
+                          weighted avg       0.57      0.53      0.54     10692

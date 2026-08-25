@@ -1,0 +1,20 @@
+Priority - Logistic Regression
+======================================================================
+
+Accuracy       : 0.2618
+Macro Precision: 0.1893
+Macro Recall   : 0.1891
+Macro F1       : 0.1852
+Weighted F1    : 0.2747
+
+              precision    recall  f1-score   support
+
+    critical       0.03      0.08      0.05       383
+        high       0.33      0.28      0.30      3731
+         low       0.19      0.21      0.20      2206
+      medium       0.36      0.31      0.33      4015
+    very_low       0.03      0.07      0.04       357
+
+    accuracy                           0.26     10692
+   macro avg       0.19      0.19      0.19     10692
+weighted avg       0.29      0.26      0.27     10692
