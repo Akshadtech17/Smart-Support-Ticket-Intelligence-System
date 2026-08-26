@@ -1,144 +1,148 @@
-# Smart Support Ticket Intelligence System
+<div align="center">
 
-AI/ML Internship Assessment Project — TARS Technologies
+# 🎫 TicketSense
+### Smart Support Ticket Intelligence System
 
-An NLP + ML system that predicts the **category** and **priority** of customer support tickets from their text.
+*Reading between the lines of every customer complaint.*
 
-## Example
+`NLP` `TF-IDF` `Logistic Regression` `Linear SVM` `scikit-learn`
 
-**Input:** "My payment was deducted but my order was cancelled."
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 
-**Output:**
-```
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=flat&logo=scikit-learn&logoColor=white)
 
-Category : Billing and Payments
-Priority : High
+![Status](https://img.shields.io/badge/status-in--progress-yellow)
 
-```
+![License](https://img.shields.io/badge/license-Educational-lightgrey)
 
-## Problem Statement
+</div>
 
-Given ticket text (subject + body), predict:
-1. **Category** (support queue)
-2. **Priority** (urgency level)
+---
 
-These are two independent classification tasks.
+## 💡 The Idea
 
-## Dataset
+Support teams drown in tickets before they even read them. **TicketSense** looks at raw ticket text and instantly tells you *where it should go* and *how fast it needs attention* — no manual triage required.
 
-[Tobi-Bueck Customer Support Tickets](https://huggingface.co/datasets/Tobi-Bueck/customer-support-tickets) (Hugging Face)
 
-| Field | Description | Usage |
-|---|---|---|
-| `subject` + `body` | Ticket text | Input |
-| `queue` | Category | Target |
-| `priority` | Priority | Target |
+┌───────────────────────────────────────────┐
+│ "My payment was deducted but my order │
+│ was cancelled." │
+└──────────────────┬──────────────────────────┘
+▼
+⚙️ clean → vectorize → classify
+▼
+┌──────────────────────────────┐
+│ 🗂 Category : Billing & Payments │
+│ 🔥 Priority : High │
+└──────────────────────────────┘
 
-**Note:** `queue`, `priority`, and `answer` are excluded from model input to prevent data leakage — only `subject + body` is used.
+---
 
-## Project Structure
+## 🧠 System Design
 
-```
 
-smart-support-ticket-intelligence/
-├── data/
-│   ├── raw/support_tickets.csv
-│   └── processed/customer_support_tickets_clean.csv
-├── models/
-│   ├── category_logistic_regression.joblib
-│   ├── category_linear_svm.joblib
-│   ├── priority_logistic_regression.joblib
-│   └── priority_linear_svm.joblib
-├── notebooks/exploratory_analysis.ipynb
-├── src/
-│   ├── data_preprocessing.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── predict.py
-├── visualizations/
-├── requirements.txt
-├── app.py
-└── README.md
+┌────────────┐ ┌──────────────┐ ┌────────────┐ ┌──────────────────┐ ┌────────────┐
+│ Raw Tickets│──▶│ Cleaning & │──▶│ TF-IDF │──▶│ Dual Classifier │──▶│ Prediction │
+│(subj+body) │ │Deduplication │ │(1-2 grams) │ │ Category | Priority│ │ Output │
+└────────────┘ └──────────────┘ └────────────┘ └──────────────────┘ └────────────┘
+Two independent classification heads share the same TF-IDF-vectorized input — **no leakage**, `queue`, `priority`, and `answer` are stripped before training.
 
-```
+---
 
-## Tech Stack
+## 📂 Project Structure
 
-Python · Pandas · NumPy · Scikit-learn · TF-IDF · Logistic Regression · Linear SVM · Matplotlib · Seaborn · Joblib
 
-## Installation
+TicketSense/
+├── 🗃️ data/
+│ ├── raw/ → untouched source CSV
+│ └── processed/ → cleaned, leak-free dataset
+├── 📓 notebooks/ → EDA & experiments
+├── 🧩 src/
+│ ├── data_preprocessing.py → clean + merge subject/body
+│ ├── train.py → fit LogReg & SVM models
+│ ├── evaluate.py → metrics + confusion matrices
+│ └── predict.py → single-ticket inference
+├── 🧠 models/ → saved .joblib artifacts
+├── 📊 visualizations/ → plots & charts
+├── app.py → demo entry point
+└── requirements.txt
+---
+
+## ⚙️ Quickstart
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd smart-support-ticket-intelligence
+git clone &lt;YOUR_GITHUB_REPOSITORY_URL&gt;
+cd TicketSense
 
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+<br>
 
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-```
 
-## Pipeline
+bash
+python src/data_preprocessing.py   # 1️⃣ clean
+python src/train.py                # 2️⃣ train
+python src/evaluate.py             # 3️⃣ evaluate
+python src/predict.py              # 4️⃣ predict
 
-```
-Ticket Text → Cleaning → TF-IDF → [Category Model | Priority Model] → Prediction
-```
 
-**Data Cleaning:** handle missing values, remove duplicates, combine subject+body, drop rows without labels.
+───
 
-**Feature Engineering:** TF-IDF (unigrams + bigrams, English stopwords removed, `min_df=2`).
+🔬 Pipeline Details
 
-**Models:** Logistic Regression (baseline) and Linear SVM (comparison) — trained separately for category and priority.
+Stage
+Approach
 
-**Split:** 80/20 train/test, stratified, `random_state=42`.
+Cleaning
+dedupe, drop unlabeled rows, merge subject + body
 
-## Evaluation Metrics
+Features
+TF-IDF · unigrams + bigrams · stopwords removed · min_df=2
 
-Accuracy, Precision, Recall, F1-score, Macro F1, Confusion Matrix
+Models
+Logistic Regression (baseline) vs. Linear SVM (comparison)
 
-| Model | Accuracy | Precision | Recall | Macro F1 |
-|---|---|---|---|---|
-| Logistic Regression | TBD | TBD | TBD | TBD |
-| Linear SVM | TBD | TBD | TBD | TBD |
+Split
+80/20 stratified · random_state=42
 
-## Usage
 
-```bash
-python src/data_preprocessing.py   # 1. Clean data
-python src/train.py                # 2. Train models
-python src/evaluate.py             # 3. Evaluate models
-python src/predict.py              # 4. Predict new ticket
-```
+📈 Results
 
-**Prediction example:**
+Model
+Accuracy
+Precision
+Recall
+Macro F1
 
-```python
-def predict_ticket(ticket_text):
-    return {
-        "ticket": ticket_text,
-        "category": category_model.predict([ticket_text])[0],
-        "priority": priority_model.predict([ticket_text])[0]
-    }
-```
+Logistic Regression
+TBD
+TBD
+TBD
+TBD
 
-## Limitations
+Linear SVM
+TBD
+TBD
+TBD
+TBD
 
-* TF-IDF lacks deep semantic understanding
-* Rare classes may be underrepresented
-* Performance depends on dataset quality
 
-## Future Improvements
 
-* Transformer-based embeddings (BERT, DistilBERT)
-* Hyperparameter tuning, cross-validation, class balancing
-* FastAPI REST API + web dashboard
-* Docker + cloud deployment + monitoring
+───
 
-## Author
+🚀 Roadmap
+[  ]  Swap TF-IDF for BERT/DistilBERT embeddings
+[  ]  Hyperparameter tuning + class balancing
+[  ]  FastAPI service + live dashboard
+[  ]  Docker image + cloud deployment
 
-**Akshad Aloni** — B.Tech CSE (Data Science)
+───
 
-## License
+⚠️ Known Limitations
+TF-IDF has no deep semantic understanding · rare classes may be underrepresented · quality is bounded by dataset quality.
 
-Developed for educational and internship assessment purposes.
-```
+───
+
+Built by Akshad Aloni · B.Tech CSE (Data Science)
+Developed for the TARS Technologies AI/ML Internship Assessment
+ ``` 
